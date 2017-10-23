@@ -4,10 +4,10 @@
   "description": "emall前端代码",
   "main": "index.js",
   "scripts": {
-    "dev"  : "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
-    "dev_win"  : "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
-    "dist" : "WEBPACK_ENV=online webpack -p",
-    "dist_win" : "set WEBPACK_ENV=online && webpack -p"
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
+    "dist": "WEBPACK_ENV=online webpack -p",
+    "dist_win": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,9 @@
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
     "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan": "^1.0.2"
   }
 }

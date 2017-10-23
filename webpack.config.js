@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-22 12:16:24
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-10-22 19:26:43
+* @Last Modified time: 2017-10-23 23:11:11
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require("extract-text-webpack-plugin");
@@ -42,6 +42,15 @@ var config = {
           { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader:'url-loader?limit=100&name=resource/[name].[ext]' }
         ]
     },
+    resolve : {
+        alias : {
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
+        }
+    },
     plugins : [
         //独立通用模块到js/base.js
     	new webpack.optimize.CommonsChunkPlugin({
@@ -57,7 +66,7 @@ var config = {
 };
 
 if ( 'dev' === WEBPACK_ENV) {
-    config.entry.common.push('webpack-dev-server/client?http://localhost:8088')
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088');
 }
 
  module.exports = config;

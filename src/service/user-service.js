@@ -2,12 +2,22 @@
 * @Author: Administrator
 * @Date:   2017-10-24 13:08:28
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-10-24 13:20:13
+* @Last Modified time: 2017-10-27 12:38:18
 */
 
 var _mm = require('util/mm.js');
 
 var _user = {
+	// 用户登录
+	login : function(userInfo,resolve, reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/login.do'),
+			data	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error   : reject
+		});
+	},
 	// 检查登录状态
 	checkLogin : function(resolve, reject){
 		_mm.request({

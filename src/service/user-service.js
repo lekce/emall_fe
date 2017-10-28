@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2017-10-24 13:08:28
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-10-27 12:38:18
+* @Last Modified by:   daihp
+* @Last Modified time: 2017-10-28 00:01:55
 */
 
 var _mm = require('util/mm.js');
@@ -12,6 +12,29 @@ var _user = {
 	login : function(userInfo,resolve, reject){
 		_mm.request({
 			url		: _mm.getServerUrl('/user/login.do'),
+			data	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error   : reject
+		});
+	},
+	// 检查用户名
+	checkUsername : function(username,resolve, reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/check_valid.do'),
+			data	: {
+				type : 'username',
+				str	 : username
+			},
+			method  : 'POST',
+			success : resolve,
+			error   : reject
+		});
+	},
+	// 用户注册
+	register : function(userInfo,resolve, reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/register.do'),
 			data	: userInfo,
 			method  : 'POST',
 			success : resolve,

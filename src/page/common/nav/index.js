@@ -2,8 +2,8 @@
 /*
 * @Author: Administrator
 * @Date:   2017-10-24 12:41:53
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-10-25 19:20:59
+* @Last Modified by:   daihp
+* @Last Modified time: 2017-10-28 00:18:06
 */
 require('./index.css');
 var _mm = require('util/mm.js');
@@ -13,8 +13,8 @@ var _cart = require('service/cart-service.js');
 var nav = {
 	init : function(){
 		this.bindEvent();
-		this.loadUserInfo;
-		this.loadCartCount;
+		this.loadUserInfo();
+		this.loadCartCount();
 		return this;
 	},
 	bindEvent : function(){
@@ -23,8 +23,8 @@ var nav = {
 			_mm.doLogin();
 		});
 		// 注册点击事件
-		$('.js-egister').click(function(){
-			window.location.href = './register.html';
+		$('.js-register').click(function(){
+			window.location.href = './user-register.html';
 		});
 		// 退出点击事件
 		$('.js-logout').click(function(){

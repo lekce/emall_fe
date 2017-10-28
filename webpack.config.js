@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2017-10-22 12:16:24
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-10-27 10:32:39
+* @Last Modified by:   daihp
+* @Last Modified time: 2017-10-27 19:52:23
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require("extract-text-webpack-plugin");
@@ -28,6 +28,7 @@ var config = {
         'common': ['./src/page/common/index.js', 'webpack-dev-server/client?http://localhost:8088'], 
     	'index' : ['./src/page/index/index.js'],
     	'user-login' : ['./src/page/user-login/index.js'],
+        'user-register' : ['./src/page/user-register/index.js'],
         'result' : ['./src/page/result/index.js'],
     },
     output: {
@@ -65,6 +66,7 @@ var config = {
         //对html模版的处理
         new HtmlWebpackPlugin(getHtmlConfig('index'), '首页'),
         new HtmlWebpackPlugin(getHtmlConfig('user-login'), '用户登录'),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register'), '用户注册'), 
         new HtmlWebpackPlugin(getHtmlConfig('result'), '操作结果')
     ]
 };

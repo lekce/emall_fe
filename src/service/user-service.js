@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-24 13:08:28
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-10-28 12:17:12
+* @Last Modified time: 2017-10-28 23:08:38
 */
 
 var _mm = require('util/mm.js');
@@ -76,6 +76,25 @@ var _user = {
 	resetPassword : function(userInfo,resolve, reject){
 		_mm.request({
 			url		: _mm.getServerUrl('/user/forget_reset_password.do'),
+			data	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error   : reject
+		});
+	}, 
+	// 获取用户信息
+	getUserInfo : function(resolve, reject){
+		_mm.request({ 
+			url		: _mm.getServerUrl('/user/get_information.do'),
+			method  : 'POST',
+			success : resolve,
+			error   : reject
+		});
+	},
+	// 更新个人信息
+	updateUserInfo : function(userInfo,resolve, reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/update_information.do'),
 			data	: userInfo,
 			method  : 'POST',
 			success : resolve,

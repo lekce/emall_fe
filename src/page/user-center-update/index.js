@@ -2,7 +2,7 @@
 * @Author: daihp
 * @Date:   2017-10-28 15:09:45
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-10-29 00:45:23
+* @Last Modified time: 2017-10-29 01:32:57
 */
 'use strict';
 require('./index.css');
@@ -37,16 +37,19 @@ var page = {
 				answer 		: $.trim($('#answer').val())
 			},
 			validateResult = _this.validateForm(userInfo);
-			if (validateResult.status) {
-					_user.updateUserInfo(userInfo,function(res, msg){
-						_mm.successTips(msg);
-						 window.location.href = './user-center.html';
-				}, function(errMsg){
-					_mm.errorTips(errMsg);
-				});
-			}else{
-				_mm.errorTips(validateResult.msg);
-			}
+
+		 	 if(validateResult.status){
+                // 更改用户信息
+                _user.updateUserInfo(userInfo, function(res, msg){
+                    _mm.successTips(msg);
+                    window.location.href = './user-center.html';
+                }, function(errMsg){
+                    _mm.errorTips(errMsg);
+                });
+            }
+            else{
+                _mm.errorTips(validateResult.msg);
+            }
 		});
 	},
 	// 加载用户信息
@@ -61,6 +64,7 @@ var page = {
 	},
 	// 验证字段信息
 	validateForm : function(formData){
+
 		var result = {
 			status : false,
 			msg    : ''

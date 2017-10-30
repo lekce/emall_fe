@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-24 13:08:28
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-10-28 23:08:38
+* @Last Modified time: 2017-10-30 19:21:40
 */
 
 var _mm = require('util/mm.js');
@@ -95,6 +95,16 @@ var _user = {
 	updateUserInfo : function(userInfo,resolve, reject){
 		_mm.request({
 			url		: _mm.getServerUrl('/user/update_information.do'),
+			data	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error   : reject
+		});
+	}, 
+	// 登录状态下更新密码
+	updatePassword : function(userInfo,resolve, reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/reset_password.do'),
 			data	: userInfo,
 			method  : 'POST',
 			success : resolve,

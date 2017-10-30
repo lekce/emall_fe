@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-25 19:52:06
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-10-28 16:00:23
+* @Last Modified time: 2017-10-30 19:02:10
 */
 
 require('./index.css');
@@ -13,10 +13,10 @@ var navSide = {
 	option : {
 		name : '',
 		navList : [
-			{name : 'user-center',  desc	: '个人中心',href	: './user-center.html'},
-			{name : 'order-list', 	desc	: '我的订单',href	: './order-list.html'},
-			{name : 'pass-update',  desc	: '修改密码',href	: './pass-update.html'},
-			{name : 'about', 		desc	: '关于E购' ,href	: './about.html'}
+			{name : 'user-center',  	desc	: '个人中心',href	: './user-center.html'},
+			{name : 'order-list', 		desc	: '我的订单',href	: './order-list.html'},
+			{name : 'user-pass-update',  desc	: '修改密码',href	: './user-pass-update.html'},
+			{name : 'about', 			desc	: '关于E购' ,href	: './about.html'}
 		]	
 	},
 	init : function(option){

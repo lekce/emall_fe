@@ -2,8 +2,8 @@
 /*
 * @Author: Administrator
 * @Date:   2017-10-25 17:18:08
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-10-25 19:11:20
+* @Last Modified by:   daihp
+* @Last Modified time: 2017-11-04 21:50:48
 */
 
 require('./index.css');
@@ -12,6 +12,7 @@ var _mm = require('util/mm.js');
 // 通用页面头部
 var header = {
 	init : function(){
+		this.onLoad();
 		this.bindEvent();
 	},
 	onLoad : function(){

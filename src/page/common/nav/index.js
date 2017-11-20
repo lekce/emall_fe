@@ -3,7 +3,7 @@
 * @Author: Administrator
 * @Date:   2017-10-24 12:41:53
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-10-28 16:47:11
+* @Last Modified time: 2017-11-20 20:22:40
 */
 require('./index.css');
 var _mm = require('util/mm.js');
@@ -46,11 +46,11 @@ var nav = {
 	},
 	// 加载购物车数量
 	loadCartCount : function(){
-		// _cart.getCartCount(function(res){
-		// 	$('.nav .cart-count').text(res || 0);
-		// }, function(errMsg){
-		// 	$('.nav .cart-count').text(0);
-		// });
+		_cart.getCartCount(function(res){
+			$('.nav .cart-count').text(res || 0);
+		}, function(errMsg){
+			$('.nav .cart-count').text(0);
+		});
 	}
 };
 

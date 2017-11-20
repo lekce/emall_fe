@@ -2,7 +2,7 @@
 * @Author: daihp
 * @Date:   2017-11-04 21:30:58
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-11-08 16:33:18
+* @Last Modified time: 2017-11-19 21:36:02
 */
 /* 排序按钮 */
 .sort-con{
@@ -80,4 +80,15 @@
 	margin-bottom: 10px;
 	color: #666;
 	text-decoration: none;
+}
+
+/* 错误信息 */
+.err-tip{
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
 }

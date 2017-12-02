@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-22 12:16:24
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-11-29 11:58:26
+* @Last Modified time: 2017-12-02 19:17:24
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require("extract-text-webpack-plugin");
@@ -46,7 +46,7 @@ var config = {
     },
     output: {
        path         : __dirname + '/dist/',
-       publicPath   : 'dev' === WEBPACK_ENV ? '/dist/' : 's.gg.com/emall-fe/dist/',
+       publicPath   : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.gg.com/emall_fe/dist/',
        filename     : 'js/[name].js'
     },
     externals : {

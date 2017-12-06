@@ -28,12 +28,11 @@
             <td class="cart-cell cell-check">
                 <label class="cart-label">
                       {{#productChecked}}
-                    <input type="checkbox" class="cart-select" checked />
-                        {{/productChecked}}
-                        {{^productChecked}}
+                            <input type="checkbox" class="cart-select" checked />
+                       {{/productChecked}}
+                       {{^productChecked}}
                         <input type="checkbox" class="cart-select"/>
-                        {{/productChecked}}
-                    <input type="checkbox" class="cart-select"/>
+                       {{/productChecked}}
                 </label>
             </td>
             <td class="cart-cell cell-img">

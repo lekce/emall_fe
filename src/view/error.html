@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<%= require('html-loader!./layout/head-common.html') %>
-	<title><%= htmlWebpackPlugin.options.title%> - E购电商平台</title>
-</head>
-<body>
-	<%= require('html-loader!./layout/nav.html') %>
-	<%= require('html-loader!./layout/header.html') %>
-	<div class="crumb">
-		<div class="w">
-			<div class="crumb-con">
-				<a href="./index.html" class="link">E购</a>
-				<span>></span>
-				<span class="link-text">没有找到页面</span>
-			</div>
-		</div>
-	</div>
-
-		<ul class="p-error-con">
-			<p class="err-tip">很抱歉，实在找不到您要的页面。</p>
-		</ul>
-		
-	</div>
-	<%= require('html-loader!./layout/footer.html') %>
-</body>						
+<html lang="en">
+    <head>
+        <%= require('html-loader!./layout/head-common.html')  %>
+        <title><%= htmlWebpackPlugin.options.title%> - E购电商平台</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/nav.html')  %>
+        <%= require('html-loader!./layout/header.html')  %>
+        <div class="crumb">
+            <div class="w">
+                <div class="crumb-con">
+                    <a class="link" href="./index.html">E购</a>
+                    <span>></span>
+                    <span class="link-text">你的页面跑丢了~~</span>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrap w">
+            <div class="panel">
+                <div class="panel-body">
+                    你的页面跑丢了~~
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!./layout/footer.html')  %>
+    </body>
 </html>

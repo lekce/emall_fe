@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-22 12:16:24
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-12-02 19:17:24
+* @Last Modified time: 2017-12-07 21:19:14
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require("extract-text-webpack-plugin");
@@ -43,6 +43,7 @@ var config = {
         'user-pass-update'    : ['./src/page/user-pass-update/index.js'],
         'result'              : ['./src/page/result/index.js'],
         'about'             : ['./src/page/about/index.js'],
+        'error'             : ['./src/page/error/index.js'],
     },
     output: {
        path         : __dirname + '/dist/',
@@ -100,6 +101,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')), 
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
         new HtmlWebpackPlugin(getHtmlConfig('about', '关于EMall')),
+        new HtmlWebpackPlugin(getHtmlConfig('error', '找不到')),
     ]
 };
 

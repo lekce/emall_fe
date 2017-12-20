@@ -2,7 +2,7 @@
 * @Author: daihp
 * @Date:   2017-11-28 22:24:35
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-11-28 22:39:22
+* @Last Modified time: 2017-12-20 11:01:33
 */
 var _mm                     = require('util/mm.js');
 var _cities                 = require('util/cities/index.js');
@@ -128,6 +128,9 @@ var addressModal = {
         }
         else if(!receiverInfo.receiverPhone){
             result.errMsg = '请输入收件人手机号';
+        }
+        else if (!_mm.validate(receiverInfo.phone, 'phone')) {
+            result.msg = '手机号格式不正确';
         }
         // 所有验证都通过了
         else{

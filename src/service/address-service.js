@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-10-24 13:08:28
 * @Last Modified by:   daihp
-* @Last Modified time: 2017-11-28 23:10:17
+* @Last Modified time: 2018-01-08 21:31:29
 */
 
 var _mm = require('util/mm.js');
@@ -11,9 +11,9 @@ var _address = {
 	// 获取地址列表
 	getAddressList : function(resolve, reject){
 		_mm.request({
-			url		: _mm.getServerUrl('/shipping/list.do?pageSize=50'),
+			url		: _mm.getServerUrl('/shipping/list.do'),
 			data	: {
-				pageSize : 50
+				pageSize : 4
 			},
 			success : resolve,
 			error   : reject

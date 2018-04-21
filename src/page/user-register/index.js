@@ -86,6 +86,10 @@ var page = {
 			result.msg = '用户名不能为空';
 			return result;
 		}
+		if (formData.username.length > 10) {
+			result.msg = '用户名超过10个字符';
+			return result;
+		}
 		if (!_mm.validate(formData.password, 'require')) {
 			result.msg = '密码不能为空';
 			return result;

@@ -87,7 +87,7 @@ var page = {
 			return result;
 		}
 		if (formData.username.length > 10) {
-			result.msg = '用户名超过10个字符';
+			result.msg = '用户名不能超过10个字符';
 			return result;
 		}
 		if (!_mm.validate(formData.password, 'require')) {

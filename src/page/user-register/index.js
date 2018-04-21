@@ -86,10 +86,13 @@ var page = {
 			result.msg = '用户名不能为空';
 			return result;
 		}
+<<<<<<< HEAD
 		if (formData.username.length > 10) {
 			result.msg = '用户名不能超过10个字符';
 			return result;
 		}
+=======
+>>>>>>> parent of f6b5a9c... 用户名长度校验
 		if (!_mm.validate(formData.password, 'require')) {
 			result.msg = '密码不能为空';
 			return result;
